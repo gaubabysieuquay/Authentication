@@ -43,6 +43,7 @@ const Login = (props) => {
     form.current.validateAll();
 
     if (checkBtn.current.context._errors.length === 0) {
+      console.log(checkBtn)
       AuthService.login(username, password).then(
         () => {
           props.history.push("/profile");
